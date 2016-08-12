@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="ClientePc">
+    <output-path>$PROJECT_DIR$/out/artifacts/ClientePc</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="tes" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="Copacabana Stock" />
+        <option name="vendor" value="Sebastian" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="ClientePc.jar">
+        <element id="module-output" name="ClientePc" />
+      </element>
+    </root>
+  </artifact>
+</component>
