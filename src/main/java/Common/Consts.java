@@ -25,6 +25,7 @@ public class Consts {
     public static final String DELETE_PROD = "/deleteProd";
     public final static String MAT_TRANSACTIONS_CHANGE = "/mat_transacChange";
     public final static String SET_USERS = "/setUsers";
+    public final static String HAS_PERMISSION = "/tienePermiso";
 
     // -> Request Methods
     public final static String POST = "POST";

@@ -45,7 +45,7 @@ public class OnEditDataResult implements OnPostExecute {
     public void onSucced() {}
 
     @Override
-    public void onFail() {
+    public void onFail(int statusCode) {
         Platform.runLater(()-> {
             loadingBox.close();
             AlertBox.display("ERROR", "No se puedo realizar la operación.");

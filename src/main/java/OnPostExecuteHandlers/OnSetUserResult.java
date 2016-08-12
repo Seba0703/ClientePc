@@ -37,7 +37,7 @@ public class OnSetUserResult implements OnPostExecute {
     }
 
     @Override
-    public void onFail() {
+    public void onFail(int statusCode) {
         Platform.runLater(()-> {
             loadingBox.close();
             actiontarget.setFill(Color.FIREBRICK);

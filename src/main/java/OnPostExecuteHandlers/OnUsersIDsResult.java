@@ -42,7 +42,7 @@ public class OnUsersIDsResult implements OnPostExecute {
     public void onSucced() {}
 
     @Override
-    public void onFail() {
+    public void onFail(int statusCode) {
         Platform.runLater(() -> AlertBox.display("ERROR", "No se pudo realizar la operación."));
 
     }

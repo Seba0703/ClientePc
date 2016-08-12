@@ -6,5 +6,5 @@ package OnPostExecuteHandlers;
 public interface OnPostExecute {
     void onSucced(String json);
     void onSucced();
-    void onFail();
+    void onFail(int statusCode);
 }

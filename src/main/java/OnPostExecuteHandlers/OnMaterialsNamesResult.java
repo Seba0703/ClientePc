@@ -1,12 +1,10 @@
 package OnPostExecuteHandlers;
 
-import Builders.AddProductsBuilder;
 import Builders.Builder;
 import Common.AlertBox;
 import Common.Consts;
 import Common.LoadingBox;
 import javafx.application.Platform;
-import org.controlsfx.control.textfield.TextFields;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -46,7 +44,7 @@ public class OnMaterialsNamesResult implements OnPostExecute {
     public void onSucced() {}
 
     @Override
-    public void onFail() {
+    public void onFail(int statusCode) {
         Platform.runLater(() -> {
             loading.close();
             AlertBox.display("ERROR", "No se pudo conectar con el servidor.");

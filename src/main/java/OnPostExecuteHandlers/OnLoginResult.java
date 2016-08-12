@@ -32,7 +32,7 @@ public class OnLoginResult implements OnPostExecute {
     }
 
     @Override
-    public void onFail() {
+    public void onFail(int statusCode) {
         actionTarget.setFill(Color.FIREBRICK);
         actionTarget.setText(sysResponse);
     }

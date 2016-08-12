@@ -4,7 +4,6 @@ import Builders.ProductFieldsBuilder;
 import Common.*;
 import InternetTools.InternetClient;
 import javafx.application.Platform;
-import javafx.scene.layout.GridPane;
 import org.json.JSONObject;
 
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -51,7 +50,7 @@ public class OnAddProductResult implements OnPostExecute{
     }
 
     @Override
-    public void onFail() {
+    public void onFail(int statusCode) {
 
         Platform.runLater(() -> {
             loadingBox.close();

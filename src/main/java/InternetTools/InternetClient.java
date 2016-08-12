@@ -21,6 +21,7 @@ public class InternetClient {
     private Map<String, String> headers;
     private OnPostExecute onPost;
     private boolean expectResponse;
+    private int responseCode;
 
     public static final String CONNECTION = "Connection";
 
@@ -33,6 +34,7 @@ public class InternetClient {
         connection = null;
         onPost = exec;
         expectResponse = response;
+        responseCode = 0;
     }
 
     public void connect() throws IOException {
@@ -64,7 +66,7 @@ public class InternetClient {
 
             connection.connect();
 
-            int responseCode = connection.getResponseCode();
+            responseCode = connection.getResponseCode();
 
             System.out.println(responseCode);
 
@@ -75,7 +77,7 @@ public class InternetClient {
                     onPost.onSucced();
                 }
             }else {
-                onPost.onFail();
+                onPost.onFail(responseCode);
             }
         } finally {
             closeConnection();

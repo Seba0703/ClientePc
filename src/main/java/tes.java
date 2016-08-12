@@ -1,23 +1,18 @@
 import Builders.*;
-import Common.AlertBox;
 import Common.Consts;
 import Common.LoadingBox;
 import Common.TaskCreator;
 import InternetTools.InternetClient;
 import OnPostExecuteHandlers.*;
+import Singleton.UserSingleton;
 import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.concurrent.Service;
-import javafx.concurrent.Task;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-import java.io.IOException;
+import org.json.JSONObject;
 
 
 public class tes extends Application {
@@ -67,7 +62,6 @@ public class tes extends Application {
         primaryStage.setTitle("Copacabana Stock");
 
         btnAdd.setOnAction(e -> {
-
             AddProductsBuilder addTB = new AddProductsBuilder(mainPane, Consts.MAT_ADD);
 
             LoadingBox loading = new LoadingBox();
@@ -104,22 +98,36 @@ public class tes extends Application {
         });
 
         btnEditProd.setOnAction( e -> {
-            EditProdViewBuilder editView = new EditProdViewBuilder(mainPane);
-            LoadingBox loading = new LoadingBox();
-            InternetClient client = new InternetClient(Consts.MATERIALS_ID, null, Consts.GET, null,
-                    new OnMaterialsNamesResult(editView, loading), true );
-            new TaskCreator(client, loading).start();
-            loading.display("Descargando...", "Espere un momento por favor.", "loading.gif");
+            JSONObject permissionRequest = new JSONObject();
+            permissionRequest.put(Consts.USER, UserSingleton.getInstance().getUserName());
+            permissionRequest.put(Consts.PROP_EDIT, true);
+            LoadingBox loadingPermi = new LoadingBox();
+            InternetClient permission = new InternetClient(Consts.HAS_PERMISSION, null, Consts.PUT, permissionRequest.toString(),
+                    new OnPermissionEditProdResult(loadingPermi, mainPane),false);
+            new TaskCreator(permission,loadingPermi).start();
+            loadingPermi.display("Buscando...", "Obteniendo permisos. Por favor espere", "loading.gif");
         });
 
         btnAddUser.setOnAction( e -> {
-            AddUserBuilder addUserBuilder = new AddUserBuilder();
-            LoadingBox loadingBox = new LoadingBox();
-            InternetClient clientUsers = new InternetClient(Consts.USERS_ID, null, Consts.GET, null,
-                    new OnUsersPropertiesResult(addUserBuilder, loadingBox), true);
+            JSONObject permissionRequest = new JSONObject();
+            permissionRequest.put(Consts.USER, UserSingleton.getInstance().getUserName());
+            permissionRequest.put(Consts.PROP_ADD_LOGON, true);
+            LoadingBox loadingPermi = new LoadingBox();
+            InternetClient permission = new InternetClient(Consts.HAS_PERMISSION, null, Consts.PUT, permissionRequest.toString(),
+                    new OnPermissionAddUserResult(loadingPermi),false);
+            new TaskCreator(permission,loadingPermi).start();
+            loadingPermi.display("Buscando...", "Obteniendo permisos. Por favor espere", "loading.gif");
+        });
 
-            new TaskCreator(clientUsers, loadingBox).start();
-            loadingBox.display("Descargando...",  "Espere un momento por favor.", "loading.gif");
+        btnConfig.setOnAction( e-> {
+            JSONObject permissionRequest = new JSONObject();
+            permissionRequest.put(Consts.USER, UserSingleton.getInstance().getUserName());
+            permissionRequest.put(Consts.PROP_CONFIG_STOCK_VARS, true);
+            LoadingBox loadingPermi = new LoadingBox();
+            InternetClient permission = new InternetClient(Consts.HAS_PERMISSION, null, Consts.PUT, permissionRequest.toString(),
+                    new OnPermissionConfigVarsResult(mainPane, loadingPermi),false);
+            new TaskCreator(permission,loadingPermi).start();
+            loadingPermi.display("Buscando...", "Obteniendo permisos. Por favor espere", "loading.gif");
         });
 
         primaryStage.show();

@@ -4,8 +4,6 @@ import Builders.ProductFieldsBuilder;
 import Common.AlertBox;
 import Common.LoadingBox;
 import javafx.application.Platform;
-import javafx.scene.Node;
-import javafx.scene.layout.GridPane;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -41,7 +39,7 @@ public class OnPostStockVars implements OnPostExecute {
     }
 
     @Override
-    public void onFail() {
+    public void onFail(int statusCode) {
         Platform.runLater(() -> {
             loadingBox.close();
             AlertBox.display("ERROR", "No se pudo realizar la operación.");

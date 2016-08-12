@@ -6,7 +6,38 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1132c8e-5c46-4e97-b125-c3c973c02b81" name="Default" comment="" />
+    <list default="true" id="b1132c8e-5c46-4e97-b125-c3c973c02b81" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Common/Consts.class" afterPath="$PROJECT_DIR$/target/classes/Common/Consts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/InternetTools/InternetClient.class" afterPath="$PROJECT_DIR$/target/classes/InternetTools/InternetClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnAddProductResult.class" afterPath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnAddProductResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnEditDataResult.class" afterPath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnEditDataResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnLoginResult.class" afterPath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnLoginResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnMaterialsNamesResult.class" afterPath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnMaterialsNamesResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnPostExecute.class" afterPath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnPostExecute.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnPostStockVars.class" afterPath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnPostStockVars.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnProductsStatusResult.class" afterPath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnProductsStatusResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnSearchResult.class" afterPath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnSearchResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnSetUserResult.class" afterPath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnSetUserResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnUsersIDsResult.class" afterPath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnUsersIDsResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnUsersPropertiesResult.class" afterPath="$PROJECT_DIR$/target/classes/OnPostExecuteHandlers/OnUsersPropertiesResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tes.class" afterPath="$PROJECT_DIR$/target/classes/tes.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Common/Consts.java" afterPath="$PROJECT_DIR$/src/main/java/Common/Consts.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Common/LoadingBox.java" afterPath="$PROJECT_DIR$/src/main/java/Common/LoadingBox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/InternetTools/InternetClient.java" afterPath="$PROJECT_DIR$/src/main/java/InternetTools/InternetClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnAddProductResult.java" afterPath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnAddProductResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnEditDataResult.java" afterPath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnEditDataResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnLoginResult.java" afterPath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnLoginResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnMaterialsNamesResult.java" afterPath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnMaterialsNamesResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPostExecute.java" afterPath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPostExecute.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPostStockVars.java" afterPath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPostStockVars.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnProductsStatusResult.java" afterPath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnProductsStatusResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnSearchResult.java" afterPath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnSearchResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnSetUserResult.java" afterPath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnSetUserResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnUsersIDsResult.java" afterPath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnUsersIDsResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnUsersPropertiesResult.java" afterPath="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnUsersPropertiesResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tes.java" afterPath="$PROJECT_DIR$/src/main/java/tes.java" />
+    </list>
     <ignored path="ClientePc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,18 +67,18 @@
       <file leaf-file-name="tes.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="117" column="69" selection-start-line="117" selection-start-column="69" selection-end-line="117" selection-end-column="69" />
+            <state relative-caret-position="346">
+              <caret line="127" column="46" selection-start-line="127" selection-start-column="46" selection-end-line="127" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnUsersPropertiesResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnUsersPropertiesResult.java">
+      <file leaf-file-name="OnPermissionConfigVarsResult.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPermissionConfigVarsResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="33" column="87" selection-start-line="33" selection-start-column="87" selection-end-line="33" selection-end-column="87" />
+            <state relative-caret-position="352">
+              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,41 +86,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddUserBuilder.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Builders/AddUserBuilder.java">
+      <file leaf-file-name="ConfigStockVarsBuilders.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Builders/ConfigStockVarsBuilders.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="228" column="36" selection-start-line="228" selection-start-column="36" selection-end-line="228" selection-end-column="36" />
+            <state relative-caret-position="1533">
+              <caret line="154" column="26" selection-start-line="154" selection-start-column="26" selection-end-line="154" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8415#8416#0" expanded="true" />
-                <element signature="e#8467#8468#0" expanded="true" />
+                <element signature="e#1258#1259#0" expanded="true" />
+                <element signature="e#1298#1299#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnSetUserResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnSetUserResult.java">
+      <file leaf-file-name="OnStockVarUpdate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnStockVarUpdate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+            <state relative-caret-position="326">
+              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PropertyAddUsersField.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PropertyUsersField/PropertyAddUsersField.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1859#1860#0" expanded="true" />
-                <element signature="e#1885#1886#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,6 +122,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -113,15 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Builder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Common/DueDateParse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PropertyDueDate/PropertyDayDueDate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/AddToolBarBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PropertyNumbers/PropertyOnlyNumbers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PropertyDate/PropertyYearDueDate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Common/StockVarFields.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Common/DateField.java" />
         <option value="$PROJECT_DIR$/src/main/java/AddProductsBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/ProductFieldsBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/Product.java" />
@@ -129,11 +140,9 @@
         <option value="$PROJECT_DIR$/src/main/java/PropertyDate/PropertyYearBuy.java" />
         <option value="$PROJECT_DIR$/src/main/java/Singleton/UserSingleton.java" />
         <option value="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnLoginResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/InternetTools/InternetClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/Builders/EditableProdViewBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/PriceTextField/PriceTextField.java" />
         <option value="$PROJECT_DIR$/src/main/java/Common/OldProduct.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Common/LoadingBox.java" />
         <option value="$PROJECT_DIR$/src/main/java/Common/AlertBox.java" />
         <option value="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnMaterialsNamesResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/Common/TaskCreator.java" />
@@ -153,17 +162,28 @@
         <option value="$PROJECT_DIR$/src/main/java/Builders/ProductFieldsBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/Builders/AddProductsBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tes.java" />
         <option value="$PROJECT_DIR$/src/main/java/PropertyAddUsersField/PropertyAddUsersField.java" />
         <option value="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnAddProductResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/Prueba.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Common/Consts.java" />
         <option value="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnUsersPropertiesResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/Common/UserProperties.java" />
         <option value="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnSetUserResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/PropertyUsersField/PropertyAddUsersField.java" />
         <option value="$PROJECT_DIR$/src/main/java/Common/UsersPropertiesList.java" />
         <option value="$PROJECT_DIR$/src/main/java/Builders/AddUserBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Common/Consts.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPostExecute.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InternetTools/InternetClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPermissionResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPermissionAddUserResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPermissionEditProdResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Common/LoadingBox.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPermissionConfigVarsResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Builders/OnVarsConfigGet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnVarsConfigGet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnStockVarUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Builders/ConfigStockVarsBuilders.java" />
       </list>
     </option>
   </component>
@@ -195,7 +215,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -213,7 +233,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -286,9 +305,88 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClientePc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClientePc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OnPostExecuteHandlers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClientePc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClientePc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClientePc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClientePc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Builders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -305,12 +403,12 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sebastian\IdeaProjects\ClientePc\src\main\resources" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="OnPostExecuteHandlers" />
       <recent name="Builders" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Sebastian\IdeaProjects\ClientePc\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.tes">
@@ -654,7 +752,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -672,8 +770,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.398773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -705,51 +803,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/InternetTools/InternetClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-188">
-          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Builders/EditableProdViewBuilder.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/control/TableView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="1052" column="22" selection-start-line="1052" selection-start-column="22" selection-end-line="1052" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PropertyDate/PropertyYearBuy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/control/TextField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="137" column="24" selection-start-line="137" selection-start-column="24" selection-end-line="137" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PriceTextField/PriceTextField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Common/OldProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
@@ -768,13 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="1063" column="0" selection-start-line="1063" selection-start-column="0" selection-end-line="1063" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPostExecute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -804,11 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1055#1056#0" expanded="false" />
-            <element signature="e#1086#1087#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,7 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -824,7 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="1719" column="21" selection-start-line="1719" selection-start-column="21" selection-end-line="1719" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -832,10 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="112" column="11" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="11" />
-          <folding>
-            <element signature="e#4183#4184#0" expanded="false" />
-            <element signature="e#4223#4224#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -843,15 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding>
-            <element signature="e#454#455#0" expanded="false" />
-            <element signature="e#483#484#0" expanded="false" />
-            <element signature="e#524#525#0" expanded="false" />
-            <element signature="e#560#561#0" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#668#669#0" expanded="false" />
-            <element signature="e#708#709#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -859,23 +885,230 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/highlight.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnMaterialsNamesResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnEditDataResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="19" column="101" selection-start-line="19" selection-start-column="101" selection-end-line="19" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Builders/ListViewProductsBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnUsersIDsResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Common/DateParse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/ProductTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnLoginResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PropertyDate/PropertyDayDueDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="5" selection-start-line="8" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PropertyDate/PropertyMonthDueDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnAddProductResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="58" column="11" selection-start-line="55" selection-start-column="8" selection-end-line="58" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Common/AlertBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnSearchResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="142" column="87" selection-start-line="142" selection-start-column="76" selection-end-line="142" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Prueba.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/glass/ui/EventLoop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/stage/Stage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="473" column="0" selection-start-line="473" selection-start-column="0" selection-end-line="473" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Common/UserProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnSetUserResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Common/UsersPropertiesList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PropertyUsersField/PropertyAddUsersField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1859#1860#0" expanded="false" />
+            <element signature="e#1885#1886#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnUsersPropertiesResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="33" column="87" selection-start-line="33" selection-start-column="87" selection-end-line="33" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/InternetTools/InternetClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPostExecute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Common/LoadingBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPermissionEditProdResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Common/Consts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Builders/AddUserBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+          <folding>
+            <element signature="e#1047#1048#0" expanded="false" />
+            <element signature="e#1083#1084#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPermissionAddUserResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#403#404#0" expanded="false" />
+            <element signature="e#451#452#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="127" column="46" selection-start-line="127" selection-start-column="46" selection-end-line="127" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Builders/EditProdViewBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="239" column="62" selection-start-line="238" selection-start-column="8" selection-end-line="239" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -888,237 +1121,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Builders/ListViewProductsBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Builders/AddProductsBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnUsersIDsResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Common/DateParse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/ProductTransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="884">
+          <caret line="94" column="35" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Builders/ProductFieldsBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="257" column="38" selection-start-line="257" selection-start-column="38" selection-end-line="257" selection-end-column="38" />
+        <state relative-caret-position="443">
+          <caret line="109" column="41" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnMaterialsNamesResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnPermissionConfigVarsResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
           <folding>
-            <element signature="e#9137#9138#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Builders/AddProductsBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="94" column="48" selection-start-line="94" selection-start-column="48" selection-end-line="94" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnLoginResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PropertyDate/PropertyDayDueDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="5" selection-start-line="8" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Builders/EditProdViewBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PropertyDate/PropertyMonthDueDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnAddProductResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="58" column="11" selection-start-line="55" selection-start-column="8" selection-end-line="58" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Common/AlertBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Builders/SearchViewBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="164" column="38" selection-start-line="164" selection-start-column="38" selection-end-line="164" selection-end-column="38" />
+        <state relative-caret-position="471">
+          <caret line="118" column="36" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnSearchResult.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnVarsConfigGet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="142" column="87" selection-start-line="142" selection-start-column="76" selection-end-line="142" selection-end-column="87" />
-          <folding />
+        <state relative-caret-position="170">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Prueba.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/glass/ui/EventLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/stage/Stage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="473" column="0" selection-start-line="473" selection-start-column="0" selection-end-line="473" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tes.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnStockVarUpdate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
-          <caret line="117" column="69" selection-start-line="117" selection-start-column="69" selection-end-line="117" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnUsersPropertiesResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="33" column="87" selection-start-line="33" selection-start-column="87" selection-end-line="33" selection-end-column="87" />
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Common/Consts.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Builders/ConfigStockVarsBuilders.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Common/UserProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Common/LoadingBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OnPostExecuteHandlers/OnSetUserResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        <state relative-caret-position="1533">
+          <caret line="154" column="26" selection-start-line="154" selection-start-column="26" selection-end-line="154" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Common/UsersPropertiesList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-          <folding>
-            <element signature="e#789#790#0" expanded="true" />
-            <element signature="e#829#830#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PropertyUsersField/PropertyAddUsersField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1859#1860#0" expanded="true" />
-            <element signature="e#1885#1886#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Builders/AddUserBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="228" column="36" selection-start-line="228" selection-start-column="36" selection-end-line="228" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8415#8416#0" expanded="true" />
-            <element signature="e#8467#8468#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
+            <element signature="e#1298#1299#0" expanded="true" />
           </folding>
         </state>
       </provider>
