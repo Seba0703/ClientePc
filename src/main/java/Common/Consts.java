@@ -70,10 +70,34 @@ public class Consts {
     public final static String OUT = "SALIDA";
     public final static String CHANGEold = "CAMBIO VIEJO";
     public final static String CHANGEnew = "CAMBIO NUEVO";
+
+    public final static String SUCURSAL1 = "SUCURSAL1";
+    public final static String SUCURSAL2 = "SUCURSAL2";
+    public final static String SUCURSAL3 = "SUCURSAL3";
+
     public final static String EMPTY = null;
-    public final static String NAZCA = "Nazca";
-    public final static String EVA = "Eva";
-    public final static String CELINA = "Celina";
+    public final static String NAZCA = "NAZCA";
+    public final static String EVA = "EVA";
+    public final static String CELINA = "CELINA";
+    public static String getMapNameSuc(String name) {
+        if (name.equals(NAZCA)) {
+            return SUCURSAL1;
+        } else if (name.equals(EVA)) {
+            return SUCURSAL2;
+        } else {
+            return SUCURSAL3;
+        }
+    }
+
+    public static String getMapSucName(String suc) {
+        if (suc.equals(SUCURSAL1)) {
+            return NAZCA;
+        } else if (suc.equals(SUCURSAL2)) {
+            return EVA;
+        } else {
+            return CELINA;
+        }
+    }
 
     //user properties
     public final static String PROP_ADD_LOGON = "agregarUser";

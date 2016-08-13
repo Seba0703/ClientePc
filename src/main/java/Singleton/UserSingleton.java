@@ -3,9 +3,7 @@ package Singleton;
 public class UserSingleton {
 
     private static UserSingleton instance = null;
-
-    //TODO: sacar cuando se conecte con el login
-    private String userName = "Sebastian";
+    private String userName;
 
     protected UserSingleton() {
         // Exists only to defeat instantiation.

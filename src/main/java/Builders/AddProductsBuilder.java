@@ -52,7 +52,7 @@ public class AddProductsBuilder implements Builder{
 
             boolean allFieldsFull = prodFields.allFieldsFull(hasUpdateStockVars.get());
             boolean correctInput = prodFields.correctInput(hasUpdateStockVars.get());
-            boolean suggestionsContains = suggestions.contains(prodFields.getNameFieldText());
+            boolean suggestionsContains = suggestions.contains(prodFields.getNameFieldText().toUpperCase());
 
             String requestMethod;
             if (suggestionsContains && !hasUpdateStockVars.get() ) {
@@ -94,7 +94,7 @@ public class AddProductsBuilder implements Builder{
 
                 prodFields.addStockVarsFields();
 
-                suggestions.add(prodFields.getNameFieldText());
+                suggestions.add(prodFields.getNameFieldText().toUpperCase());
                 prodFields.addNewSuggestion(suggestions);
 
                 grid.getChildren().remove(save);

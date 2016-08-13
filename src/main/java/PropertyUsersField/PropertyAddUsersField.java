@@ -31,7 +31,7 @@ public class PropertyAddUsersField implements ChangeListener<Boolean> {
     public void changed(ObservableValue<? extends Boolean> observable, Boolean notFocus, Boolean focus) {
 
         if (!focus) {
-            prop = userProperties.find(userTextField.getText());
+            prop = userProperties.find(userTextField.getText().toUpperCase());
             if (prop != null) {
                 addUser.setSelected(prop.addLogon);
                 extract.setSelected(prop.extract);
@@ -64,7 +64,7 @@ public class PropertyAddUsersField implements ChangeListener<Boolean> {
             prop.pcIn = pcIn.isSelected();
         } else {
             prop = new UserProperties(addUser.isSelected(), stockVar.isSelected(), editProd.isSelected(),
-                    extract.isSelected(), pcIn.isSelected(), userTextField.getText());
+                    extract.isSelected(), pcIn.isSelected(), userTextField.getText().toUpperCase());
             userProperties.add(prop);
         }
     }

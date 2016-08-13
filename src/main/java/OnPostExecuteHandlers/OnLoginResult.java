@@ -9,32 +9,35 @@ import javafx.stage.Stage;
 public class OnLoginResult implements OnPostExecute {
 
     private Stage window;
-    private Scene mainScene;
     private Text actionTarget;
-    private String sysResponse;
     private String userName;
 
-    public OnLoginResult(Stage window, Scene main, Text action, String sysResponse, String userName) {
+    public OnLoginResult(Stage window, Text action, String userName) {
         this.window = window;
-        mainScene = main;
         actionTarget = action;
-        this.sysResponse =  sysResponse;
         this.userName = userName;
 
     }
 
     @Override
     public void onSucced(String json) {}
+
     @Override
     public void onSucced() {
-        UserSingleton.getInstance().setUserName(userName);
-        window.setScene(mainScene);
+        UserSingleton.getInstance().setUserName(userName.toUpperCase());
+        window.close();
+        MainStage stage = new MainStage();
+        try {
+            stage.start(window);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onFail(int statusCode) {
         actionTarget.setFill(Color.FIREBRICK);
-        actionTarget.setText(sysResponse);
+        actionTarget.setText("Usuario no existe o contraseña erronea.");
     }
 }
 

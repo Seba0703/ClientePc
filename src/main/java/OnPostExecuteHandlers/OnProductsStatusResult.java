@@ -22,10 +22,14 @@ public class OnProductsStatusResult implements OnPostExecute {
 
     @Override
     public void onSucced(String json) {
+        System.out.println("json");
         JSONObject jsonObject =  new JSONObject(json);
+        System.out.println("json insumos");
         JSONArray jsonArray = (JSONArray) jsonObject.get(Consts.INSUMOS);
+        System.out.println("insumos fxcollec");
 
         ObservableList<Product> products = FXCollections.observableArrayList();
+        System.out.println("fx cole");
 
         for( int i = 0; i < jsonArray.length(); i++) {
             JSONObject jsonO =  jsonArray.getJSONObject(i);
@@ -38,8 +42,11 @@ public class OnProductsStatusResult implements OnPostExecute {
         }
 
         Platform.runLater(() -> {
+            System.out.println("build");
             listViewProducts.build(products);
+            System.out.println("build close");
             loadingBox.close();
+            System.out.println("close");
         });
     }
 

@@ -156,19 +156,19 @@ public class EditProdViewBuilder implements Builder{
         goEditBtn.setOnAction( e -> {
 
             if (notEmpty(nameField) ) {
-                if (suggestions.contains(nameField.getText())) {
+                if (suggestions.contains(nameField.getText().toUpperCase())) {
                     if (correctDate(dayField, monthField, yearField)) {
                         if (correctDate(buyDayField, buyMonthField, buyYearField)) {
                             if (notEmpty(priceField) && nonZeroDouble(priceField)) {
                                 if (notEmpty(userField)) {
-                                    if (userSuggestions.contains(userField.getText())) {
+                                    if (userSuggestions.contains(userField.getText().toUpperCase())) {
 
                                         JSONObject jsonO = getRequest();
 
                                         LoadingBox loadingBox = new LoadingBox();
 
                                         AddProductsBuilder addTB = new AddProductsBuilder(vBox, Consts.DELETE_PROD);
-                                        addTB.setUser(userField.getText());
+                                        addTB.setUser(userField.getText().toUpperCase());
 
                                         InternetClient client = new InternetClient(Consts.EDIT_PROD, null, Consts.PUT, jsonO.toString(),
                                                 new OnEditDataResult(addTB, suggestions, loadingBox), true);

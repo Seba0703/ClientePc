@@ -170,12 +170,10 @@ public class ProductFieldsBuilder {
         grid.add(safeField, 1, 9);
         grid.add(multiplyLabel, 0, 10);
         grid.add(multiplyField, 1, 10);
-
-
     }
 
     public void addNewSuggestion(List<String> suggestions) {
-        String name = nameField.getText();
+        String name = nameField.getText().toUpperCase();
         grid.getChildren().remove(nameField);
         nameField = new TextField();
         TextFields.bindAutoCompletion(nameField, suggestions);
@@ -256,7 +254,7 @@ public class ProductFieldsBuilder {
     }
 
     public String getNameFieldText() {
-        return nameField.getText();
+        return nameField.getText().toUpperCase();
     }
 
     public int getCantFieldInt() {
@@ -319,7 +317,7 @@ public class ProductFieldsBuilder {
 
     public JSONObject buildRequest() {
         JSONObject request = new JSONObject();
-        request.put(Consts.MATERIALS, nameField.getText());
+        request.put(Consts.MATERIALS, nameField.getText().toUpperCase());
         request.put(Consts.QUANTITY, getCantFieldInt());
         request.put(Consts.PRICE, getPriceFieldDouble());
 
@@ -328,7 +326,7 @@ public class ProductFieldsBuilder {
 
         int buyDateInt = DateParse.parse(buyDayField.getText(), buyMonthField.getText(), buyYearField.getText());
         request.put(Consts.TRANSACTION_DATE, buyDateInt);
-        request.put(Consts.USER, UserSingleton.getInstance().getUserName());
+        request.put(Consts.USER, UserSingleton.getInstance().getUserName().toUpperCase());
 
         return request;
 

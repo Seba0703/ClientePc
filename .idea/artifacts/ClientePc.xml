@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/ClientePc</output-path>
     <properties id="javafx-properties">
       <options>
-        <option name="appClass" value="tes" />
+        <option name="appClass" value="Client" />
         <option name="description" value="" />
         <option name="htmlPlaceholderId" value="" />
         <option name="title" value="Copacabana Stock" />
@@ -15,6 +15,8 @@
       <element id="archive" name="ClientePc.jar">
         <element id="module-output" name="ClientePc" />
       </element>
+      <element id="library" level="project" name="Maven: org.controlsfx:controlsfx:8.40.11" />
+      <element id="library" level="project" name="Maven: org.json:json:20160212" />
     </root>
   </artifact>
 </component>

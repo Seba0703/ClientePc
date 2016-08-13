@@ -6,6 +6,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
@@ -20,9 +21,7 @@ import java.util.Map;
 
 public class Client extends Application {
 
-    Stage window;
-
-    Scene scene1, mainScene;
+    private Stage window;
 
     public static void main(String[] args) {
         launch(args);
@@ -32,6 +31,7 @@ public class Client extends Application {
 
         window = primaryStage;
         window.setTitle(Consts.LOGIN_TITLE);
+        window.getIcons().add( new Image("file:logoCopa.png"));
 
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
@@ -79,47 +79,31 @@ public class Client extends Application {
 
         Button btn = new Button("Ingresar");
         btn.setOnAction(e ->
-                handle(userTextField, pwBox, actiontarget, "Usuario no existe o contraseña erronea.", Consts.LOGIN, Consts.GET ));
+                handle(userTextField, pwBox, actiontarget));
 
         HBox hbBtn = new HBox(10);
         hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
         hbBtn.getChildren().add(btn);
         grid.add(hbBtn, 1, 4);
 
-        Hyperlink link = new Hyperlink();
-        link.setText("¿Ingresar un nuevo usuario?");
-        link.setOnAction(e ->
-                handle(userTextField, pwBox, actiontarget, "Usuario ya existente. Ingrese uno distinto", Consts.LOGON, Consts.POST));
-
-        grid.add(link, 1, 6);
-
         Scene loginScene = new Scene(grid, 300, 275);
         window.setScene(loginScene);
-
-        Button button2 = new Button("This sucks, go back to scene 1");
-        ToolBar toolBar = new ToolBar(button2);
-
-        mainScene = new Scene(toolBar, 600, 300);
-
 
         window.show();
     }
 
-    private void handle(TextField userTextField, PasswordField pwBox, Text actiontarget, String sysResponse,
-                        String path, String method ) {
+    private void handle(TextField userTextField, PasswordField pwBox, Text actiontarget) {
 
         if (userTextField.getText().isEmpty() || pwBox.getText().isEmpty()) {
-
             actiontarget.setFill(Color.FIREBRICK);
             actiontarget.setText("Algunos campos estan vacios.");
-
         } else {
             actiontarget.setText("");
             Map<String, String> headers = new HashMap<>();
             headers.put(Consts.USER, userTextField.getText());
             headers.put(Consts.PASS, pwBox.getText());
-            InternetClient client = new InternetClient(path, headers, method, null,
-                    new OnLoginResult(window, mainScene, actiontarget, sysResponse, userTextField.getText()), false);
+            InternetClient client = new InternetClient(Consts.LOGIN, headers, Consts.GET, null,
+                    new OnLoginResult(window, actiontarget, userTextField.getText()), false);
             try {
                 client.connect();
             }catch (IOException er) {

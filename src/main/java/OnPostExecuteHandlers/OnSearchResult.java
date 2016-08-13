@@ -47,7 +47,7 @@ public class OnSearchResult implements OnPostExecute {
 
             String transDateS = String.valueOf(jsonO.getInt(Consts.TRANSACTION_DATE));
             String transDateProp = transDateS.substring(6) + "-" + transDateS.substring(4,6) + "-" + transDateS.substring(0, 4);
-            String destiny = jsonO.getString(Consts.DESTINY);
+            String destiny = Consts.getMapSucName(jsonO.getString(Consts.DESTINY));
             String dueDateS = String.valueOf(jsonO.getInt(Consts.DUE_DATE));
             System.out.println(dueDateS);
             String dueDateProp = dueDateS.substring(6) + "-" + dueDateS.substring(4,6) + "-" + dueDateS.substring(0, 4);

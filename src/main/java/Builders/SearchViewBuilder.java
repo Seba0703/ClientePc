@@ -156,7 +156,7 @@ public class SearchViewBuilder implements Builder {
                 LoadingBox loadingBox = new LoadingBox();
 
                 String path;
-                if (transTyp.getValue().equals(Consts.CHANGEnew) || transTyp.getValue().equals(Consts.CHANGEold) ) {
+                if ( transTyp.getValue()!= null && (transTyp.getValue().equals(Consts.CHANGEnew) || transTyp.getValue().equals(Consts.CHANGEold) )) {
                     path = Consts.MAT_TRANSACTIONS_CHANGE;
                 } else {
                     path = Consts.MAT_TRANSACTIONS;
@@ -195,27 +195,27 @@ public class SearchViewBuilder implements Builder {
         JSONObject jsonO = new JSONObject();
 
         if (notEmpty(prodField)) {
-            if (suggestions.contains(prodField.getText())) {
-                jsonO.put(Consts.MATERIALS, prodField.getText());
+            if (suggestions.contains(prodField.getText().toUpperCase())) {
+                jsonO.put(Consts.MATERIALS, prodField.getText().toUpperCase());
             }else {
                 AlertBox.display("INVALIDO", "Se ingresó un INSUMO invalido. Se ignora esta entrada.");
             }
         }
 
         if (notEmpty(userName)) {
-            if (userSuggestions.contains(userName.getText())) {
-                jsonO.put(Consts.USER, userName.getText());
+            if (userSuggestions.contains(userName.getText().toUpperCase())) {
+                jsonO.put(Consts.USER, userName.getText().toUpperCase());
             } else {
                 AlertBox.display("INVALIDO", "Se ingresó un USUARIO invalido. Se ignora esta entrada.");
             }
         }
 
         if (diffNull(transTyp)) {
-            jsonO.put(Consts.TRANSACTION_TYPE, transTyp.getValue().toLowerCase());
+            jsonO.put(Consts.TRANSACTION_TYPE, transTyp.getValue());
         }
 
         if (diffNull(sucursal)) {
-            jsonO.put(Consts.DESTINY, sucursal.getValue());
+            jsonO.put(Consts.DESTINY, Consts.getMapNameSuc(sucursal.getValue()));
         }
 
         JSONObject jsonDate = new JSONObject();

@@ -1,3 +1,5 @@
+package OnPostExecuteHandlers;
+
 import Builders.*;
 import Common.Consts;
 import Common.LoadingBox;
@@ -5,7 +7,6 @@ import Common.TaskCreator;
 import InternetTools.InternetClient;
 import OnPostExecuteHandlers.*;
 import Singleton.UserSingleton;
-import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -15,23 +16,20 @@ import javafx.stage.Stage;
 import org.json.JSONObject;
 
 
-public class tes extends Application {
+public class MainStage {
 
     VBox mainPane;
 
-    public static void main(String[] args) {
-        launch(args);
+    public MainStage() {
+
     }
 
     public void start(Stage primaryStage) throws Exception {
 
-        ImageView listImage = new ImageView(
-                new Image("file:list.png")
-        );
+        primaryStage.getIcons().add(new Image("file:logoCopa.png"));
 
-        ImageView addProdImage = new ImageView(
-                new Image("file:addProd.png")
-        );
+        ImageView listImage = new ImageView(new Image("file:list.png"));
+        ImageView addProdImage = new ImageView(new Image("file:addProd.png"));
 
         Button btnAdd = new Button("Agregar producto", addProdImage);
         Button btnListStock = new Button("Ver listado", listImage);
