@@ -32,19 +32,19 @@ public class ListViewProductsBuilder {
     public void build(ObservableList<Product> products) {
 
         TableColumn<Product, String> nameColumn = new TableColumn<>("Insumo");
-        nameColumn.setMinWidth(300);
+        nameColumn.setMinWidth(250);
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
 
         TableColumn<Product, Integer> toBuyColumn = new TableColumn<>("A comprar");
-        toBuyColumn.setMinWidth(150);
+        toBuyColumn.setMinWidth(100);
         toBuyColumn.setCellValueFactory(new PropertyValueFactory<>("toBuy"));
 
         TableColumn<Product, Integer> quantityColumn = new TableColumn<>("Stock actual");
-        quantityColumn.setMinWidth(150);
+        quantityColumn.setMinWidth(100);
         quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
 
         TableColumn<Product, Integer> stockMaxColumn = new TableColumn<>("Stock máximo");
-        stockMaxColumn.setMinWidth(150);
+        stockMaxColumn.setMinWidth(100);
         stockMaxColumn.setCellValueFactory(new PropertyValueFactory<>("stockMax"));
 
         TableView<Product> table = new TableView<>();

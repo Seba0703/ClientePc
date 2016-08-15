@@ -26,7 +26,7 @@ public class InternetClient {
     public static final String CONNECTION = "Connection";
 
     public InternetClient(String path, Map<String, String> headerM, String rMethod, String jBody, OnPostExecute exec, boolean response ) {
-        nURL = "http://25.168.129.241:4567" + path;
+        nURL = "http://192.168.0.16:4567" + path;
         requestMethod = rMethod;
         jsonBody = jBody;
         headers = headerM;

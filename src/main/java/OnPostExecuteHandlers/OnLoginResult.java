@@ -37,7 +37,7 @@ public class OnLoginResult implements OnPostExecute {
     @Override
     public void onFail(int statusCode) {
         actionTarget.setFill(Color.FIREBRICK);
-        actionTarget.setText("Usuario no existe o contraseña erronea.");
+        actionTarget.setText("Usuario no existe o contraseña errónea.");
     }
 }
 

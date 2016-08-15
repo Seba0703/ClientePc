@@ -41,7 +41,7 @@ public class AddUserBuilder {
         //Block events to other windows
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Agregar usuarios");
-        window.setMinWidth(740);
+        window.setMinWidth(900);
 
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);

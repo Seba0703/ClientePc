@@ -82,31 +82,31 @@ public class OnSearchResult implements OnPostExecute {
         runLater(() -> {
 
             TableColumn<ProductTransaction, String> nameColumn = new TableColumn<>("Insumo");
-            nameColumn.setMinWidth(300);
+            nameColumn.setMinWidth(200);
             nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
 
             TableColumn<ProductTransaction, Integer> qColumn = new TableColumn<>("Cantidad");
-            qColumn.setMinWidth(100);
+            qColumn.setMinWidth(65);
             qColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
 
             TableColumn<ProductTransaction, String> destinyColumn = new TableColumn<>("Destino");
-            destinyColumn.setMinWidth(100);
+            destinyColumn.setMinWidth(65);
             destinyColumn.setCellValueFactory(new PropertyValueFactory<>("destiny"));
 
             TableColumn<ProductTransaction, String> transDateColumn = new TableColumn<>("Fecha de transacción");
-            transDateColumn.setMinWidth(100);
+            transDateColumn.setMinWidth(130);
             transDateColumn.setCellValueFactory(new PropertyValueFactory<>("transDate"));
 
             TableColumn<ProductTransaction, String> transTypeColumn = new TableColumn<>("Tipo de transacción");
-            transTypeColumn.setMinWidth(100);
+            transTypeColumn.setMinWidth(130);
             transTypeColumn.setCellValueFactory(new PropertyValueFactory<>("transType"));
 
             TableColumn<ProductTransaction, String> dueDateColumn = new TableColumn<>("Fecha de vencimiento");
-            dueDateColumn.setMinWidth(100);
+            dueDateColumn.setMinWidth(130);
             dueDateColumn.setCellValueFactory(new PropertyValueFactory<>("dueDate"));
 
             TableColumn<ProductTransaction, Double> priceColumn = new TableColumn<>("Precio");
-            priceColumn.setMinWidth(100);
+            priceColumn.setMinWidth(65);
             priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
 
             TableColumn<ProductTransaction, String> userColumn = new TableColumn<>("Usuario");

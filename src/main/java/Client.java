@@ -86,7 +86,7 @@ public class Client extends Application {
         hbBtn.getChildren().add(btn);
         grid.add(hbBtn, 1, 4);
 
-        Scene loginScene = new Scene(grid, 300, 275);
+        Scene loginScene = new Scene(grid, 300, 250);
         window.setScene(loginScene);
 
         window.show();
@@ -96,7 +96,7 @@ public class Client extends Application {
 
         if (userTextField.getText().isEmpty() || pwBox.getText().isEmpty()) {
             actiontarget.setFill(Color.FIREBRICK);
-            actiontarget.setText("Algunos campos estan vacios.");
+            actiontarget.setText("Algunos campos estan vacíos.");
         } else {
             actiontarget.setText("");
             Map<String, String> headers = new HashMap<>();
