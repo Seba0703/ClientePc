@@ -5,6 +5,7 @@ import Common.Consts;
 import Common.LoadingBox;
 import Common.TaskCreator;
 import InternetTools.InternetClient;
+import OS_Command.WindowsCommand;
 import OnPostExecuteHandlers.OnEditDataResult;
 import OnPostExecuteHandlers.OnUsersIDsResult;
 import PriceTextField.PriceTextField;
@@ -67,21 +68,23 @@ public class EditProdViewBuilder implements Builder{
 
         HBox hNamePriceUser = new HBox();
         hNamePriceUser.setPadding(new Insets(5, 12, 5, 12));
-        hNamePriceUser.setSpacing(6);
+        hNamePriceUser.setSpacing(12);
         hNamePriceUser.setAlignment(Pos.CENTER);
 
         // NOMBRE
-        Label nameProd = new Label("Nombre: ");
+        Label nameProd = new Label(" Nombre: ");
+        nameProd.setPadding(new Insets(5, 1, 5, 65 ));
         nameField = new TextField();
 
         // PRECIO
         Label price = new Label("Precio: ");
         priceField = new PriceTextField();
+        priceField.setPromptText("Precio");
 
         //USUARIO
         Label user = new Label("Usuario: ");
         userField = new TextField();
-
+        userField.setPromptText("Nombre de usuario");
         List<String> userSuggestions = new ArrayList<>();
 
         InternetClient clientUsers = new InternetClient(Consts.USERS_ID, null, Consts.GET, null,
@@ -93,7 +96,7 @@ public class EditProdViewBuilder implements Builder{
         }
 
         // HBOX de precio, nombre y usuario agrego
-        hNamePriceUser.getChildren().addAll(nameProd, nameField, price, priceField, user, userField);
+        hNamePriceUser.getChildren().addAll(nameProd, nameField, priceField, userField);
 
         HBox dueDateBox = new HBox();
         dueDateBox.setPadding(new Insets(5, 12, 5, 12));
@@ -127,7 +130,7 @@ public class EditProdViewBuilder implements Builder{
         buyDateBox.setAlignment(Pos.CENTER);
 
         //FECHA DE COMPRA
-        Label buyDate = new Label("Fecha de compra: ");
+        Label buyDate = new Label("       Fecha de compra: ");
         buyYearField = new TextField();
         buyYearField.setPromptText("Año");
         buyYearField.textProperty().addListener(new PropertyYearBuy(buyYearField));
@@ -151,7 +154,12 @@ public class EditProdViewBuilder implements Builder{
 
         buttonBox.setAlignment(Pos.CENTER);
         Button goEditBtn = new Button("Ir a edición");
-        buttonBox.getChildren().add(goEditBtn);
+
+        Hyperlink help = new Hyperlink("¿Ayuda puntual?");
+        help.setOnAction(e-> WindowsCommand.goPDF(10));
+        help.setAlignment(Pos.BASELINE_RIGHT);
+
+        buttonBox.getChildren().addAll(goEditBtn, help);
 
         goEditBtn.setOnAction( e -> {
 

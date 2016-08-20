@@ -2,6 +2,7 @@ package Builders;
 
 import Common.*;
 import InternetTools.InternetClient;
+import OS_Command.WindowsCommand;
 import OnPostExecuteHandlers.OnSetUserResult;
 import PropertyUsersField.PropertyAddUsersField;
 import javafx.geometry.Insets;
@@ -61,6 +62,10 @@ public class AddUserBuilder {
 
         editPass = new CheckBox("¿Editar contraseña?");
         grid.add(editPass, 2, 2);
+
+        Hyperlink help = new Hyperlink("¿Ayuda puntual?");
+        help.setOnAction(e-> WindowsCommand.goPDF(7));
+        grid.add(help, 4, 0);
 
         Label newPass = new Label("Nueva contraseña");
         textField2 = new TextField();
@@ -172,22 +177,25 @@ public class AddUserBuilder {
         boolean noneSelected = !addUser.isSelected() &&
                 !extract.isSelected() && !editProd.isSelected() && !stockVar.isSelected() && !pcIn.isSelected();
 
-        if (noneSelected || userNameField.getText().isEmpty() || (!propertyAddUsersField.contain() && pwBox.getText().isEmpty()) ||
-                (editPass.isSelected() && newPwBox.getText().isEmpty()) ) {
+        String userNameFinal =  userNameField.getText().replaceAll("\\s+$", "");
+        String userPassFinal = pwBox.getText().replaceAll("\\s+$", "");
+        String userNewPassFinal = newPwBox.getText().replaceAll("\\s+$", "");
+
+        if (noneSelected || userNameFinal.isEmpty() || (!propertyAddUsersField.contain() && userPassFinal.isEmpty()) ||
+                (editPass.isSelected() && userNewPassFinal.isEmpty()) ) {
             if (noneSelected) {
-                actiontarget.setFill(Color.FIREBRICK);
                 actiontarget.setText("Seleccione algún permiso para el usuario.");
             }else {
-                actiontarget.setFill(Color.FIREBRICK);
                 actiontarget.setText("Algunos campos estan vacios.");
             }
+            actiontarget.setFill(Color.FIREBRICK);
         } else {
 
             LoadingBox loadingBox = new LoadingBox();
 
             actiontarget.setText("");
             JSONObject jsonObject = new JSONObject();
-            jsonObject.put(Consts.USER, userNameField.getText());
+            jsonObject.put(Consts.USER, userNameFinal);
             jsonObject.put(Consts.PROP_PC_IN, pcIn.isSelected());
             jsonObject.put(Consts.PROP_EXTRACT, extract.isSelected());
             jsonObject.put(Consts.PROP_CONFIG_STOCK_VARS, stockVar.isSelected());
@@ -195,13 +203,13 @@ public class AddUserBuilder {
             jsonObject.put(Consts.PROP_EDIT, editProd.isSelected());
 
             if (propertyAddUsersField.contain() && editPass.isSelected()) {
-                jsonObject.put(Consts.PASS, pwBox.getText());
-                jsonObject.put(Consts.PASS_NEW, newPwBox.getText());
+                jsonObject.put(Consts.PASS, userPassFinal);
+                jsonObject.put(Consts.PASS_NEW, userNewPassFinal);
                 jsonObject.put(Consts.CHECK_PASS, true);
             } else if (propertyAddUsersField.contain()) {
                 jsonObject.put(Consts.CHECK_PASS, false);
             } else if (editPass.isSelected() || (!propertyAddUsersField.contain() && !editPass.isSelected())) {
-                jsonObject.put(Consts.PASS, pwBox.getText());
+                jsonObject.put(Consts.PASS, userPassFinal);
                 jsonObject.put(Consts.CHECK_PASS, false);
             }
 

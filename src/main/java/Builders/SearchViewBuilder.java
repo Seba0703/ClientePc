@@ -5,6 +5,7 @@ import Common.Consts;
 import Common.LoadingBox;
 import Common.TaskCreator;
 import InternetTools.InternetClient;
+import OS_Command.WindowsCommand;
 import OnPostExecuteHandlers.OnSearchResult;
 import OnPostExecuteHandlers.OnUsersIDsResult;
 import PropertyDate.PropertyDayDueDate;
@@ -174,7 +175,11 @@ public class SearchViewBuilder implements Builder {
             fromDayField.clear(); fromMonthField.clear(); fromYearField.clear();
             toDayField.clear(); toMonthField.clear(); toYearField.clear();
         });
-        hBttnBox.getChildren().add(clearBttn);
+
+        Hyperlink help = new Hyperlink("¿Ayuda puntual?");
+        help.setOnAction(e-> WindowsCommand.goPDF(15));
+
+        hBttnBox.getChildren().addAll(clearBttn, help);
         hBttnBox.setAlignment(Pos.CENTER);
 
 

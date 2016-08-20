@@ -1,13 +1,11 @@
 package Builders;
 
 import Common.Consts;
+import OS_Command.WindowsCommand;
 import OnPostExecuteHandlers.Product;
 import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
@@ -108,7 +106,10 @@ public class ListViewProductsBuilder {
         white.setFill(Color.ANTIQUEWHITE);
         white.setStrokeWidth(3);
 
-        hRef.getChildren().addAll(ok, white, careful, yellow, danger, red);
+        Hyperlink help = new Hyperlink("¿Ayuda puntual?");
+        help.setOnAction(e-> WindowsCommand.goPDF(20));
+        Label ref = new Label("Referencias: ");
+        hRef.getChildren().addAll(ref, ok, white, careful, yellow, danger, red, help);
 
         vBox.getChildren().addAll(table,hRef);
 

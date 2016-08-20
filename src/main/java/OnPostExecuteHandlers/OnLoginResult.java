@@ -24,7 +24,8 @@ public class OnLoginResult implements OnPostExecute {
 
     @Override
     public void onSucced() {
-        UserSingleton.getInstance().setUserName(userName.toUpperCase());
+        //el header elimina los espacios al final
+        UserSingleton.getInstance().setUserName(userName.toUpperCase().replaceAll("\\s+$", ""));
         window.close();
         MainStage stage = new MainStage();
         try {

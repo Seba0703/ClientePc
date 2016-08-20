@@ -1,5 +1,6 @@
 package PropertyUsersField;
 
+import Common.Consts;
 import Common.UserProperties;
 import Common.UsersPropertiesList;
 import javafx.beans.value.ChangeListener;
@@ -56,16 +57,18 @@ public class PropertyAddUsersField implements ChangeListener<Boolean> {
     }
 
     public void set() {
-        if (has) {
-            prop.addLogon = addUser.isSelected();
-            prop.extract = extract.isSelected();
-            prop.editProd = editProd.isSelected();
-            prop.configVarStock = stockVar.isSelected();
-            prop.pcIn = pcIn.isSelected();
-        } else {
-            prop = new UserProperties(addUser.isSelected(), stockVar.isSelected(), editProd.isSelected(),
-                    extract.isSelected(), pcIn.isSelected(), userTextField.getText().toUpperCase());
-            userProperties.add(prop);
+        if (!prop.name.equals(Consts.ADMIN)) {
+            if (has) {
+                prop.addLogon = addUser.isSelected();
+                prop.extract = extract.isSelected();
+                prop.editProd = editProd.isSelected();
+                prop.configVarStock = stockVar.isSelected();
+                prop.pcIn = pcIn.isSelected();
+            } else {
+                prop = new UserProperties(addUser.isSelected(), stockVar.isSelected(), editProd.isSelected(),
+                        extract.isSelected(), pcIn.isSelected(), userTextField.getText().toUpperCase());
+                userProperties.add(prop);
+            }
         }
     }
 }

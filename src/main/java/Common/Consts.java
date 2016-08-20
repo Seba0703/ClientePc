@@ -106,5 +106,7 @@ public class Consts {
     public final static String PROP_CONFIG_STOCK_VARS = "configStockVars";
     public final static String PROP_PC_IN = "ingresoPC";
 
+    public final static String ADMIN = "GUELY";
+
     public final static int FIRST_BUY_YEAR = 2000;
 }

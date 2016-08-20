@@ -61,8 +61,6 @@ public class AddProductsBuilder implements Builder{
                 requestMethod = Consts.POST;
             }
 
-            System.out.println("Request: "+ requestMethod + " Full: " + allFieldsFull+ " correc: " + correctInput + " Sugg: " + suggestionsContains);
-
             if ( allFieldsFull && correctInput && suggestionsContains ) {
 
                 JSONObject request = prodFields.buildRequest();

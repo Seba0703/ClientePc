@@ -2,6 +2,7 @@ package Builders;
 
 import Common.Consts;
 import Common.DateParse;
+import OS_Command.WindowsCommand;
 import PriceTextField.PriceTextField;
 import PropertyDate.PropertyDayDueDate;
 import PropertyDate.PropertyMonthDueDate;
@@ -13,10 +14,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.VPos;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.Separator;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -63,7 +61,6 @@ public class ProductFieldsBuilder {
 
         // -> Ingresar precio
         Label price = new Label("Precio: ");
-        final Pattern pattern = Pattern.compile("^\\d*\\.?\\d*$");
         priceField = new PriceTextField();
 
         //  Ingresar fecha de vencimiento dia mes año
@@ -108,6 +105,11 @@ public class ProductFieldsBuilder {
         Text scenetitle = new Text("Agregar un producto nuevo o ya existente.");
         scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 15));
         grid.add(scenetitle, 0, 0, 2, 1);
+
+        Hyperlink help = new Hyperlink("¿Ayuda puntual?");
+        help.setOnAction(e-> WindowsCommand.goPDF(4));
+
+        grid.add(help, 5, 0);
 
         grid.add(nameProd, 0, 1);
         grid.add(nameField, 1, 1);

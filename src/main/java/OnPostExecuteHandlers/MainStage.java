@@ -7,10 +7,15 @@ import Common.TaskCreator;
 import InternetTools.InternetClient;
 import OnPostExecuteHandlers.*;
 import Singleton.UserSingleton;
+import javafx.geometry.HPos;
+import javafx.geometry.Insets;
+import javafx.geometry.Orientation;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.json.JSONObject;
@@ -29,33 +34,71 @@ public class MainStage {
         primaryStage.getIcons().add(new Image("file:logoCopa.png"));
 
         ImageView listImage = new ImageView(new Image("file:list.png"));
-        ImageView addProdImage = new ImageView(new Image("file:addProd.png"));
+        ImageView addProdImage = new ImageView(new Image("file:addProd4.png"));
+        ImageView furnitureImage = new ImageView(new Image("file:sheet.png"));
+        ImageView addUserImage = new ImageView(new Image("file:virden.png"));
+        ImageView configImage = new ImageView(new Image("file:config.png"));
+        ImageView searchImage = new ImageView(new Image("file:search3.png"));
+        ImageView editProdImage = new ImageView(new Image("file:edit_prod.png"));
 
         Button btnAdd = new Button("Agregar producto", addProdImage);
-        Button btnListStock = new Button("Ver listado", listImage);
-        Button btnSearch = new Button("Buscar");
-        Button btnConfig = new Button("Configurar");
-        Button btnAddUser = new Button("Agregar usuario");
-        Button btnEditProd = new Button("Editar producto");
+        Button btnListStock = new Button("Ver listado productos", listImage);
+        Button btnListFurniture = new Button("Exportar listado muebles", furnitureImage);
+        Button btnSearch = new Button("Buscar", searchImage);
+        Button btnConfig = new Button("Configurar", configImage);
+        Button btnAddUser = new Button("Agregar usuario", addUserImage);
+        Button btnEditProd = new Button("Editar producto", editProdImage);
+
+        Separator sep1 = new Separator(); sep1.setOrientation(Orientation.VERTICAL);
+        Separator sep2 = new Separator(); sep2.setOrientation(Orientation.VERTICAL);
+        Separator sep3 = new Separator(); sep3.setOrientation(Orientation.VERTICAL);
+        Separator sep4 = new Separator(); sep4.setOrientation(Orientation.VERTICAL);
+        Separator sep5 = new Separator(); sep5.setOrientation(Orientation.VERTICAL);
+        sep1.setStyle("-fx-background-color: #b1b1b1 ;");
+        sep2.setStyle("-fx-background-color: #b1b1b1 ;");
+        sep3.setStyle("-fx-background-color: #b1b1b1 ;");
+        sep4.setStyle("-fx-background-color: #b1b1b1 ;");
+        sep5.setStyle("-fx-background-color: #b1b1b1 ;");
 
         ToolBar mainToolBar = new ToolBar();
         mainToolBar.getItems().addAll(
-                new Separator(),
+                sep1,
                 btnAdd,
                 btnAddUser,
-                new Separator(),
+                sep2,
                 btnEditProd,
-                new Separator(),
+                sep3,
                 btnSearch,
                 btnListStock,
-                new Separator(),
+                btnListFurniture,
+                sep4,
                 btnConfig,
-                new Separator()
+                sep5
         );
 
+        HBox customToolbar = new HBox(10);
+        customToolbar.setPadding(new Insets(15, 10, 15, 10));
+        customToolbar.getChildren().addAll(
+                sep1,
+                btnAdd,
+                btnAddUser,
+                sep2,
+                btnEditProd,
+                sep3,
+                btnSearch,
+                btnListStock,
+                btnListFurniture,
+                sep4,
+                btnConfig,
+                sep5
+        );
+        customToolbar.setAlignment(Pos.CENTER);
+        customToolbar.setStyle("-fx-background-color: lightgrey ");
+
         mainPane = new VBox();
-        mainPane.getChildren().add(mainToolBar);
-        Scene scene = new Scene(mainPane, 800, 600);
+        mainPane.setStyle("-fx-background-color:  #e5e5e5 ");
+        mainPane.getChildren().add(customToolbar);
+        Scene scene = new Scene(mainPane, 1150, 600);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Copacabana Stock");
 

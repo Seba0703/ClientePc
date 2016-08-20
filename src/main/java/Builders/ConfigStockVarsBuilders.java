@@ -5,6 +5,7 @@ import Common.Consts;
 import Common.LoadingBox;
 import Common.TaskCreator;
 import InternetTools.InternetClient;
+import OS_Command.WindowsCommand;
 import OnPostExecuteHandlers.OnStockVarUpdate;
 import OnPostExecuteHandlers.OnVarsConfigGet;
 import PropertyNumbers.PropertyOnlyNumbers;
@@ -12,10 +13,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.VPos;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.Separator;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -57,6 +55,10 @@ public class ConfigStockVarsBuilders implements Builder{
         Text scenetitle = new Text("Ingrese un insumo existente para configurar las variables de stock.");
         scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 15));
         grid.add(scenetitle, 0, 0, 2, 1);
+
+        Hyperlink help = new Hyperlink("¿Ayuda puntual?");
+        help.setOnAction(e-> WindowsCommand.goPDF(18));
+        grid.add(help, 4, 0);
 
         Label nameProd = new Label("Nombre: ");
         nameField = new TextField();
