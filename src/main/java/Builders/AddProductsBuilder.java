@@ -85,7 +85,7 @@ public class AddProductsBuilder implements Builder{
             } else if (!allFieldsFull) {
                 AlertBox.display("NULL", "Hay campos sin llenar.");
             } else if (!correctInput) {
-                AlertBox.display("Entrada invalida", "El formato de algunos campos son incorrectos.");
+                AlertBox.display("Entrada invalida", "El formato de algunos campos son incorrectos o la lógica de las variables de stock no es correcta.");
             } else {
 
                 hasUpdateStockVars.set(true);

@@ -40,6 +40,8 @@ public class ConfigStockVarsBuilders implements Builder{
     private ImageView graphStock;
     private String prodSearched;
 
+    private int max;
+
     public ConfigStockVarsBuilders(VBox mainPane) {
         this.mainPane = mainPane;
     }
@@ -128,19 +130,21 @@ public class ConfigStockVarsBuilders implements Builder{
         save.setOnAction(e-> {
             if (fieldOK(minField) && fieldOK(safeField) && fieldOK(multiplyField) &&
                     prodSearched.equals(nameField.getText().toUpperCase())) {
-                JSONObject request = buildRequest();
-                LoadingBox loadingBox = new LoadingBox();
-                InternetClient client = new InternetClient(Consts.VARS_CONFIG, null, Consts.PUT, request.toString(),
-                        new OnStockVarUpdate(this, loadingBox), false);
-                new TaskCreator(client, loadingBox).start();
-                loadingBox.display("Guardando...", "Por favor espere un momento.", "miloStock.gif");
+                if (goodLogic()) {
+                    JSONObject request = buildRequest();
+                    LoadingBox loadingBox = new LoadingBox();
+                    InternetClient client = new InternetClient(Consts.VARS_CONFIG, null, Consts.PUT, request.toString(),
+                            new OnStockVarUpdate(this, loadingBox), false);
+                    new TaskCreator(client, loadingBox).start();
+                    loadingBox.display("Guardando...", "Por favor espere un momento.", "miloStock.gif");
+                } else {
+                    AlertBox.display("Lo siento", "La lógica de las variables de stock no es correcta.");
+                }
             } else {
                 AlertBox.display("INVÁLIDO", "Campos vacíos, con cero o el insumo buscado es otro.");
             }
         });
 
-        //grid.add(maxLabel, 0, 4);
-        //grid.add(maxField, 1, 4);
         grid.add(minLabel, 0, 3);
         grid.add(minField, 1, 3);
         grid.add(safeLabel, 0, 4);
@@ -155,6 +159,16 @@ public class ConfigStockVarsBuilders implements Builder{
         }
 
         mainPane.getChildren().add(grid);
+    }
+
+    private boolean goodLogic() {
+        int safe = Integer.parseInt(safeField.getText());
+        int min = Integer.parseInt(minField.getText());
+        int multiply = Integer.parseInt(multiplyField.getText());
+        boolean upper = max - safe < max;
+        boolean middle = max - multiply*safe < max - safe;
+        boolean lower = min + safe < max - multiply*safe;
+        return lower && middle && upper;
     }
 
     private boolean fieldOK(TextField field) {
@@ -208,7 +222,8 @@ public class ConfigStockVarsBuilders implements Builder{
         TextFields.bindAutoCompletion(nameField, suggestions);
     }
 
-    public void setAll(int stockMin, int safeVar, int multiply) {
+    public void setAll(int max, int stockMin, int safeVar, int multiply) {
+        this.max = max;
         ableVIsibleEdition();
         minField.setText(String.valueOf(stockMin));
         safeField.setText(String.valueOf(safeVar));

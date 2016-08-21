@@ -190,7 +190,7 @@ public class ProductFieldsBuilder {
         try {
             correctCant = nonZeroFieldInt(cantField);
             if (hasUpdateStockVars) {
-                correctStockBar = nonZeroFieldInt(safeField) && nonZeroFieldInt(maxField) && nonZeroFieldInt(minField) && nonZeroFieldInt(multiplyField);
+                correctStockBar = nonZeroFieldInt(safeField) && nonZeroFieldInt(maxField) && nonZeroFieldInt(minField) && nonZeroFieldInt(multiplyField) && goodLogic();
             }
         }catch (NumberFormatException e) {
             correctCant = false;
@@ -203,6 +203,18 @@ public class ProductFieldsBuilder {
             return correctCant && nonZeroFieldDouble(priceField) && correctYear(yearField) && nonZeroFieldInt(dayField)
                     && nonZeroFieldInt(monthField) && correctYear(buyYearField) && nonZeroFieldInt(buyMonthField) && nonZeroFieldInt(buyDayField);
         }
+    }
+
+    private boolean goodLogic() {
+        int max = Integer.parseInt(maxField.getText());
+        int min = Integer.parseInt(minField.getText());
+        int safe = Integer.parseInt(safeField.getText());
+        int multiply = Integer.parseInt(multiplyField.getText());
+
+        boolean upper = max - safe < max;
+        boolean middle = max - multiply*safe < max - safe;
+        boolean lower = min + safe < max - multiply*safe;
+        return lower && middle && upper;
     }
 
     public boolean allFieldsFull(boolean hasUpdateStockVars) {

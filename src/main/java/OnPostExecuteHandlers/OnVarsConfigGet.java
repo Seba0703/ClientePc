@@ -25,9 +25,10 @@ public class OnVarsConfigGet implements OnPostExecute{
         int stockMin = jsonObject.getInt(Consts.STOCK_MIN);
         int safeVar = jsonObject.getInt(Consts.STOCK_SAFE);
         int multiply = jsonObject.getInt(Consts.STOCK_MULTIPLY);
+        int max = jsonObject.getInt(Consts.STOCK_MAX);
         Platform.runLater(()-> {
             loadingBox.close();
-            configStockVarsBuilders.setAll(stockMin, safeVar, multiply);
+            configStockVarsBuilders.setAll(max, stockMin, safeVar, multiply);
         });
     }
 

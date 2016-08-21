@@ -1,6 +1,7 @@
 package InternetTools;
 
 import OnPostExecuteHandlers.OnPostExecute;
+import Singleton.IpPort;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -23,10 +24,8 @@ public class InternetClient {
     private boolean expectResponse;
     private int responseCode;
 
-    public static final String CONNECTION = "Connection";
-
     public InternetClient(String path, Map<String, String> headerM, String rMethod, String jBody, OnPostExecute exec, boolean response ) {
-        nURL = "http://192.168.0.16:4567" + path;
+        nURL = IpPort.getInstance().getIpPort() + path;
         requestMethod = rMethod;
         jsonBody = jBody;
         headers = headerM;

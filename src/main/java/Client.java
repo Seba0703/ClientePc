@@ -1,6 +1,8 @@
+import Common.AlertBox;
 import Common.Consts;
 import InternetTools.InternetClient;
 import OnPostExecuteHandlers.OnLoginResult;
+import Singleton.IpPort;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -32,6 +34,14 @@ public class Client extends Application {
         window = primaryStage;
         window.setTitle(Consts.LOGIN_TITLE);
         window.getIcons().add( new Image("file:logoCopa.png"));
+
+        String ip = IpReader.read();
+
+        if (ip!= null) {
+            IpPort.getInstance().setIpPort(ip);
+        } else {
+            AlertBox.display("------E R R O R------", "Variables de configuración dañadas.");
+        }
 
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
