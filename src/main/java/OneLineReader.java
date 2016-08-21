@@ -3,11 +3,11 @@ import java.io.FileReader;
 import java.io.IOException;
 
 
-public class IpReader {
+public class OneLineReader {
 
-    public static String read() {
+    public static String read(String file) {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("ipPort.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader(file));
             return reader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
