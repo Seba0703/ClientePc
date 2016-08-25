@@ -212,8 +212,8 @@ public class ProductFieldsBuilder {
         int multiply = Integer.parseInt(multiplyField.getText());
 
         boolean upper = max - safe < max;
-        boolean middle = max - multiply*safe < max - safe;
-        boolean lower = min + safe < max - multiply*safe;
+        boolean middle = max - multiply*safe <= max - safe;
+        boolean lower = min + safe <= max - multiply*safe;
         return lower && middle && upper;
     }
 
