@@ -28,6 +28,7 @@ public class OnSetUserResult implements OnPostExecute {
     @Override
     public void onSucced() {
         Platform.runLater(()-> {
+            System.out.println("EXITO");
             loadingBox.close();
             propertyAddUsersField.set();
             addUserBuilder.clear();

@@ -26,6 +26,8 @@ public class Consts {
     public final static String MAT_TRANSACTIONS_CHANGE = "/mat_transacChange";
     public final static String SET_USERS = "/setUsers";
     public final static String HAS_PERMISSION = "/tienePermiso";
+    public static final String FURNITURE = "/muebles";
+    public static final String FURNITURE_NOT_UPDATED = "/namesNotUpdateMueble";
 
     // -> Request Methods
     public final static String POST = "POST";
@@ -47,6 +49,16 @@ public class Consts {
     public final static String TO_BUY = "paraComprar";
     public final static String TRANSACTION_TYPE = "tipoTrans";
     public final static String DESTINY = "destino";
+    public final static String N_SUC = "sucN";
+    public final static String N_MEMBER = "memberN";
+    public final static String STATE = "estado";
+    public final static int STATE_GOOD = 3;
+    public final static int STATE_REGULAR = 2;
+    public final static int STATE_BAD = 1;
+    public final static int STATE_OUT = 0;
+    public final static String LAST_UPDATE = "lastUpdate";
+    public final static String FINAL_PRICE = "precioFinal";
+    public final static String BUY_DATE = "fechaCompra";
 
     public final static String NEW_VALUE = "nuevo";
     public final static String MATERIALSnew = "newInsumo_id";
@@ -99,6 +111,24 @@ public class Consts {
         }
     }
 
+    public static String getMapState(int state) {
+        switch (state) {
+            case STATE_BAD: return "Malo";
+            case STATE_GOOD: return "Bueno";
+            case STATE_REGULAR: return "Regular";
+            default: return "Descartado";
+        }
+    }
+
+    public static String format(int yearMonth) {
+        String date = String.valueOf(yearMonth);
+        String year = date.substring(0,4);
+        String month = date.substring(4,6);
+        String day = date.substring(6);
+
+        return day + "-" + month + "-" + year;
+    }
+
     //user properties
     public final static String PROP_ADD_LOGON = "agregarUser";
     public final static String PROP_EXTRACT = "sacarInsumo";
@@ -109,4 +139,10 @@ public class Consts {
     public final static String ADMIN = "GUELY";
 
     public final static int FIRST_BUY_YEAR = 2000;
+
+    //nombre de los .csv de salida
+    public final static String ALL_FURNI_CSV = "Todos_muebles.csv";
+    public final static String NOT_UPD_FURNI_CSV = "Falta_actualizar_muebles.csv";
+    public final static String ROOT_PATH = "C:\\Users\\";
+    public final static String NEXT_ROOT_PATH = "\\Desktop\\SalidaExcel\\";
 }

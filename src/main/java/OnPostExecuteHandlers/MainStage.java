@@ -7,10 +7,7 @@ import Common.TaskCreator;
 import InternetTools.InternetClient;
 import OnPostExecuteHandlers.*;
 import Singleton.UserSingleton;
-import javafx.geometry.HPos;
-import javafx.geometry.Insets;
-import javafx.geometry.Orientation;
-import javafx.geometry.Pos;
+import javafx.geometry.*;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -59,22 +56,6 @@ public class MainStage {
         sep3.setStyle("-fx-background-color: #b1b1b1 ;");
         sep4.setStyle("-fx-background-color: #b1b1b1 ;");
         sep5.setStyle("-fx-background-color: #b1b1b1 ;");
-
-        ToolBar mainToolBar = new ToolBar();
-        mainToolBar.getItems().addAll(
-                sep1,
-                btnAdd,
-                btnAddUser,
-                sep2,
-                btnEditProd,
-                sep3,
-                btnSearch,
-                btnListStock,
-                btnListFurniture,
-                sep4,
-                btnConfig,
-                sep5
-        );
 
         HBox customToolbar = new HBox(10);
         customToolbar.setPadding(new Insets(15, 10, 15, 10));
@@ -160,7 +141,7 @@ public class MainStage {
             loadingPermi.display("Buscando...", "Obteniendo permisos. Por favor espere", "loading.gif");
         });
 
-        btnConfig.setOnAction( e-> {
+        btnConfig.setOnAction( e -> {
             JSONObject permissionRequest = new JSONObject();
             permissionRequest.put(Consts.USER, UserSingleton.getInstance().getUserName());
             permissionRequest.put(Consts.PROP_CONFIG_STOCK_VARS, true);
@@ -169,6 +150,43 @@ public class MainStage {
                     new OnPermissionConfigVarsResult(mainPane, loadingPermi),false);
             new TaskCreator(permission,loadingPermi).start();
             loadingPermi.display("Buscando...", "Obteniendo permisos. Por favor espere", "loading.gif");
+        });
+
+        btnListFurniture.setOnAction( e -> {
+            HBox allNotUpd = new HBox(10);
+            allNotUpd.setPadding(new Insets(20,20,20,20));
+            allNotUpd.setAlignment(Pos.CENTER);
+            ImageView allImage = new ImageView(new Image("file:allMuebles.png"));
+            ImageView allImage2 = new ImageView(new Image("file:allMuebles.png"));
+
+            Button allFurniture = new Button("Todos los bienes", allImage2);
+            Button notUpdFurniture = new Button("No actualizados", allImage);
+
+            allFurniture.setOnAction( ev -> {
+                allFurniture.setDisable(true);
+                LoadingBox loadingBox = new LoadingBox();
+                loadingBox.display("Exportando...", "Por favor espere un momento.", "miloStock.gif");
+                InternetClient client = new InternetClient(Consts.FURNITURE, null, Consts.GET, null, new OnAllFurniResult(loadingBox, allFurniture), true);
+                new TaskCreator(client, loadingBox).start();
+            });
+
+            notUpdFurniture.setOnAction( ev -> {
+                notUpdFurniture.setDisable(true);
+                LoadingBox loadingBox = new LoadingBox();
+                loadingBox.display("Exportando...", "Por favor espere un momento.", "miloStock.gif");
+                InternetClient client = new InternetClient(Consts.FURNITURE_NOT_UPDATED, null, Consts.GET, null,
+                        new OnNotUpdFurniResult(loadingBox, notUpdFurniture), true);
+                new TaskCreator(client, loadingBox).start();
+            });
+
+            allNotUpd.getChildren().addAll(allFurniture, notUpdFurniture);
+
+            if (mainPane.getChildren().size() == 2) {
+                mainPane.getChildren().remove(1);
+            }
+
+            mainPane.getChildren().add(allNotUpd);
+
         });
 
         primaryStage.show();

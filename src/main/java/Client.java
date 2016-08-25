@@ -47,7 +47,7 @@ public class Client extends Application {
         String command = OneLineReader.read("command.txt");
 
         if (command!= null) {
-            CommandSingleton.getInstance().setCommand(command);
+            CommandSingleton.getInstance().setPDFCommand(command);
         } else {
             AlertBox.display("------E R R O R------", "Variables de configuración dañadas.");
         }

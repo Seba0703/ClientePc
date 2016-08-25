@@ -175,7 +175,7 @@ public class ProductFieldsBuilder {
     }
 
     public void addNewSuggestion(List<String> suggestions) {
-        String name = nameField.getText().toUpperCase();
+        String name = getNameFieldText();
         grid.getChildren().remove(nameField);
         nameField = new TextField();
         TextFields.bindAutoCompletion(nameField, suggestions);
@@ -268,7 +268,7 @@ public class ProductFieldsBuilder {
     }
 
     public String getNameFieldText() {
-        return nameField.getText().toUpperCase();
+        return nameField.getText().toUpperCase().trim().replaceAll(" +", " ");
     }
 
     public int getCantFieldInt() {
@@ -331,7 +331,9 @@ public class ProductFieldsBuilder {
 
     public JSONObject buildRequest() {
         JSONObject request = new JSONObject();
-        request.put(Consts.MATERIALS, nameField.getText().toUpperCase());
+        String prodName = nameField.getText().toUpperCase();
+        String splited = prodName.trim().replaceAll(" +", " ");
+        request.put(Consts.MATERIALS, splited);
         request.put(Consts.QUANTITY, getCantFieldInt());
         request.put(Consts.PRICE, getPriceFieldDouble());
 

@@ -13,7 +13,6 @@ public class PropertyAddUsersField implements ChangeListener<Boolean> {
     private TextField userTextField;
     private UsersPropertiesList userProperties;
     private CheckBox addUser, extract, editProd, stockVar, pcIn;
-    private boolean has;
     private UserProperties prop;
 
     public PropertyAddUsersField(TextField userTextField, UsersPropertiesList userProperties, CheckBox addUser, CheckBox extract, CheckBox editProd, CheckBox stockVar, CheckBox pcIn) {
@@ -25,7 +24,7 @@ public class PropertyAddUsersField implements ChangeListener<Boolean> {
         this.editProd = editProd;
         this.stockVar = stockVar;
         this.pcIn = pcIn;
-        has = false;
+        prop = null;
     }
 
     @Override
@@ -39,26 +38,24 @@ public class PropertyAddUsersField implements ChangeListener<Boolean> {
                 editProd.setSelected(prop.editProd);
                 stockVar.setSelected(prop.configVarStock);
                 pcIn.setSelected(prop.pcIn);
-                has = true;
             } else {
                 addUser.setSelected(false);
                 extract.setSelected(false);
                 editProd.setSelected(false);
                 stockVar.setSelected(false);
                 pcIn.setSelected(false);
-                has = false;
             }
         }
 
     }
 
     public boolean contain() {
-        return has;
+        return prop != null;
     }
 
     public void set() {
-        if (!prop.name.equals(Consts.ADMIN)) {
-            if (has) {
+        if (prop == null || !prop.name.equals(Consts.ADMIN)) {
+            if (prop != null) {
                 prop.addLogon = addUser.isSelected();
                 prop.extract = extract.isSelected();
                 prop.editProd = editProd.isSelected();

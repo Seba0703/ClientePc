@@ -6,7 +6,9 @@ package Singleton;
 public class CommandSingleton {
 
     private static CommandSingleton instance = null;
-    private String command;
+    private String pdfCommand;
+
+    private String excelPath;
 
     protected CommandSingleton() {
         // Exists only to defeat instantiation.
@@ -19,12 +21,20 @@ public class CommandSingleton {
         return instance;
     }
 
-    public void setCommand(String comm) {
-        command = comm;
+    public void setPDFCommand(String comm) {
+        pdfCommand = comm;
     }
 
-    public String getCommand() {
-        return command;
+    public String getPDFCommand() {
+        return pdfCommand;
+    }
+
+    public String getExcelPath() {
+        return excelPath;
+    }
+
+    public void setExcelPath(String excelPath) {
+        this.excelPath = excelPath;
     }
 
 }

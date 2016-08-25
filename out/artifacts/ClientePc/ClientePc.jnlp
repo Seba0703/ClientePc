@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ClientePc.jar" size="1791402" download="eager" />
+    <jar href="ClientePc.jar" size="1801522" download="eager" />
     <jar href="controlsfx-8.40.11.jar" size="985420" download="eager" />
     <jar href="json-20160212.jar" size="49176" download="eager" />
   </resources>

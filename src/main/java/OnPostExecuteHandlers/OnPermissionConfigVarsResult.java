@@ -26,7 +26,6 @@ public class OnPermissionConfigVarsResult implements OnPostExecute {
     public void onSucced() {
         Platform.runLater(()-> {
             loadingPermi.close();
-            System.out.println("permiso");
             ConfigStockVarsBuilders configStockVar = new ConfigStockVarsBuilders(mainPane);
             LoadingBox loading = new LoadingBox();
             InternetClient client = new InternetClient(Consts.MATERIALS_ID, null, Consts.GET, null,
