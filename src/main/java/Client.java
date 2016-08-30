@@ -1,5 +1,7 @@
 import Common.AlertBox;
 import Common.Consts;
+import Common.LoadingBox;
+import Common.TaskCreator;
 import InternetTools.InternetClient;
 import OnPostExecuteHandlers.OnLoginResult;
 import Singleton.CommandSingleton;
@@ -117,18 +119,15 @@ public class Client extends Application {
             actiontarget.setFill(Color.FIREBRICK);
             actiontarget.setText("Algunos campos estan vacíos.");
         } else {
+            LoadingBox loadingBox = new LoadingBox();
+            loadingBox.display("Conectando...", "Espere un momento por favor.", "loading.gif");
             actiontarget.setText("");
             Map<String, String> headers = new HashMap<>();
             headers.put(Consts.USER, userTextField.getText());
             headers.put(Consts.PASS, pwBox.getText());
             InternetClient client = new InternetClient(Consts.LOGIN, headers, Consts.GET, null,
-                    new OnLoginResult(window, actiontarget, userTextField.getText()), false);
-            try {
-                client.connect();
-            }catch (IOException er) {
-                actiontarget.setFill(Color.FIREBRICK);
-                actiontarget.setText("No hay conexión de red.");
-            }
+                    new OnLoginResult(window, actiontarget, userTextField.getText(), loadingBox), false);
+            new TaskCreator(client, loadingBox).start();
         }
     }
 
