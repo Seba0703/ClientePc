@@ -24,6 +24,18 @@ public class InternetClient {
     private boolean expectResponse;
     private int responseCode;
 
+    public InternetClient(String path, Map<String, String> headerM, String rMethod, String jBody, OnPostExecute exec, boolean response, String ipPort ) {
+        nURL = ipPort + path;
+        requestMethod = rMethod;
+        jsonBody = jBody;
+        headers = headerM;
+        is = null;
+        connection = null;
+        onPost = exec;
+        expectResponse = response;
+        responseCode = 0;
+    }
+
     public InternetClient(String path, Map<String, String> headerM, String rMethod, String jBody, OnPostExecute exec, boolean response ) {
         nURL = IpPort.getInstance().getIpPort() + path;
         requestMethod = rMethod;

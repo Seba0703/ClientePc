@@ -1,5 +1,6 @@
 package Builders;
 
+import Common.AlertBox;
 import Common.Consts;
 import OS_Command.WindowsCommand;
 import OnPostExecuteHandlers.Product;
@@ -15,6 +16,11 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.util.Callback;
+import org.json.JSONObject;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 
 public class ListViewProductsBuilder {
@@ -111,7 +117,37 @@ public class ListViewProductsBuilder {
         Label ref = new Label("Referencias: ");
         hRef.getChildren().addAll(ref, ok, white, careful, yellow, danger, red, help);
 
-        vBox.getChildren().addAll(table,hRef);
+        HBox hRefBut = new HBox(10);
+        hRefBut.setAlignment(Pos.CENTER);
+        Button goExcel = new Button("Exportar a Excel");
+        goExcel.setOnAction(e -> {
+            String title = "Nombre;A comprar;Stock Actual;Stock máximo\n";
+            String username = System.getProperty("user.name");
+            String path = Consts.ROOT_PATH + username + Consts.NEXT_ROOT_PATH + Consts.INSUMOS_STOCK;
+            FileOutputStream out = null;
+            try {
+                out = new FileOutputStream(path);
+                out.write(title.getBytes());
+
+                for (Product product : products){
+
+                    String row = product.getName() + ";" + product.getToBuy() + ";" + product.getQuantity() + ";" + product.getStockMax() + "\n";
+                    out.write(row.getBytes());
+                }
+
+                out.close();
+                WindowsCommand.goExcel(path);
+            } catch (FileNotFoundException e1) {
+                e1.printStackTrace();
+                AlertBox.display("ERROR", "No se pudo realizar la operación.");
+            } catch (IOException e1) {
+                AlertBox.display("ERROR", "No se pudo realizar la operación.");
+            }
+        });
+
+        hRefBut.getChildren().addAll(goExcel);
+
+        vBox.getChildren().addAll(table,hRef,hRefBut);
 
         //elimina si tiene uno en su lugar
         if (mainVbox.getChildren().size() == 2) {

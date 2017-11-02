@@ -142,6 +142,7 @@ public class Consts {
 
     //nombre de los .csv de salida
     public final static String ALL_FURNI_CSV = "Todos_muebles.csv";
+    public final static String INSUMOS_STOCK = "InsumosStock.csv";
     public final static String NOT_UPD_FURNI_CSV = "Falta_actualizar_muebles.csv";
     public final static String ROOT_PATH = "C:\\Users\\";
     public final static String NEXT_ROOT_PATH = "\\Desktop\\SalidaExcel\\";
