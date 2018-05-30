@@ -8,6 +8,7 @@ import InternetTools.InternetClient;
 import OS_Command.WindowsCommand;
 import OnPostExecuteHandlers.OnSearchResult;
 import OnPostExecuteHandlers.OnUsersIDsResult;
+import OnPostExecuteHandlers.Product;
 import PropertyDate.PropertyDayDueDate;
 import PropertyDate.PropertyMonthDueDate;
 import PropertyDate.PropertyYearBuy;
@@ -23,6 +24,8 @@ import javafx.scene.layout.VBox;
 import org.controlsfx.control.textfield.TextFields;
 import org.json.JSONObject;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

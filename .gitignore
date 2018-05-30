@@ -1,0 +1,12 @@
+
+.idea/kotlinc.xml
+*.xml
+.idea/libraries/Maven__org_controlsfx_controlsfx_8_40_11.xml
+.idea/misc.xml
+.idea/workspace.xml
+ClientePc.iml
+ipPort.txt
+*.html
+*.jar
+*.jnlp
+*.class

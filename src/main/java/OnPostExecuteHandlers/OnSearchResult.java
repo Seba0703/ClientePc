@@ -1,5 +1,6 @@
 package OnPostExecuteHandlers;
 
+import Builders.GoExcelBuilder;
 import Common.AlertBox;
 import Common.Consts;
 import Common.LoadingBox;
@@ -14,6 +15,9 @@ import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 import static javafx.application.Platform.runLater;
 
@@ -40,6 +44,8 @@ public class OnSearchResult implements OnPostExecute {
 
         boolean changeView = path.equals(Consts.MAT_TRANSACTIONS_CHANGE);
 
+        String tituloFileExcel = "";
+
         for( int i = 0; i < jsonArray.length(); i++) {
             JSONObject jsonO =  jsonArray.getJSONObject(i);
             String nameProd = jsonO.getString(Consts.MATERIALS);
@@ -54,6 +60,7 @@ public class OnSearchResult implements OnPostExecute {
 
 
             String transType = jsonO.getString(Consts.TRANSACTION_TYPE);
+            tituloFileExcel = transType;
             String userName = jsonO.getString(Consts.USER);
             double price = jsonO.getDouble(Consts.PRICE);
 
@@ -78,6 +85,26 @@ public class OnSearchResult implements OnPostExecute {
                         transType.toUpperCase(), price, Consts.WHITE_CHANGE));
             }
         }
+
+        GoExcelBuilder goExcelBuilder = new GoExcelBuilder("Insumo;Destino;Usuario;Tipo de Transacción;Fecha de Transacción;Fecha de vencimiento;Cantidad;Precio\n", tituloFileExcel,searchV) {
+            @Override
+            public void fillExcel(FileOutputStream out) throws IOException {
+                StringBuilder row = new StringBuilder();
+                for (ProductTransaction product : products){
+                    addCell(row, product.getName());
+                    addCell(row, product.getDestiny());
+                    addCell(row, product.getUserName());
+                    addCell(row, product.getTransType());
+                    addCell(row, product.getTransDate());
+                    addCell(row, product.getDueDate());
+                    addCell(row, String.valueOf(product.getQuantity()));
+                    addCell(row, String.valueOf(product.getPrice()));
+                    endRow(row);
+
+                    out.write(row.toString().getBytes());
+                }
+            }
+        };
 
         runLater(() -> {
 
@@ -164,6 +191,8 @@ public class OnSearchResult implements OnPostExecute {
             }
 
             searchV.getChildren().add(table);
+
+            goExcelBuilder.build();
 
             loadingBox.close();
         });
